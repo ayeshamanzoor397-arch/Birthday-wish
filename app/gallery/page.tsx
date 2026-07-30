@@ -65,14 +65,14 @@ export default function Gallery() {
         {memories[index].caption}
       </p>
 
-      <buttonrun
-        onClick={handleNext}
-        className="mt-6 bg-pink-500 text-white px-6 py-3 rounded-full"
-      >
-        {index === memories.length - 1
-          ? "Read My Letter 💌"
-          : "Next ❤️"}
-      </buttonrun>
+      <button
+  onClick={handleNext}
+  className="mt-6 bg-pink-500 text-white px-6 py-3 rounded-full"
+>
+  {index === memories.length - 1
+    ? "Read My Letter 💌"
+    : "Next ❤️"}
+</button>
     </main>
   );
 }
