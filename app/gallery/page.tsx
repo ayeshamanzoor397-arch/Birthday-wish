@@ -6,31 +6,31 @@ import { useRouter } from "next/navigation";
 
 const memories = [
   {
-    image: "/images/image1.png",
-    caption: "One of my favourite memories ❤️",
+    image: "/images/img8.jpeg",
+    caption: "One of my favourite pic ❤️",
   },
   {
-    image: "/images/image2.png",
+    image: "/images/img3.jpeg",
     caption: "You make ordinary days special ✨",
   },
   {
-    image: "/images/image3.png",
+    image: "/images/img4.jpeg",
     caption: "Thank you for being part of my life 🌸",
   },
   {
-    image: "/images/image4.png",
+    image: "/images/img6.jpeg",
     caption: "Every picture tells a beautiful story 💖",
   },
   {
-    image: "/images/image5.png",
+    image: "/images/img5.jpeg",
     caption: "So many smiles, so many memories 🥰",
   },
   {
-    image: "/images/image6.png",
-    caption: "Life is brighter with you in it ✨",
+    image: "/images/img7.jpeg",
+    caption: "Life is brighter with you ✨",
   },
   {
-    image: "/images/image7.png",
+    image: "/images/img2.jpeg",
     caption: "A friendship I will always cherish 🌷",
   },
 ];
@@ -39,13 +39,23 @@ export default function Gallery() {
   const [index, setIndex] = useState(0);
   const router = useRouter();
 
+  const handleNext = () => {
+    if (index < memories.length - 1) {
+      setIndex(index + 1);
+    } else {
+      router.push("/letter");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-pink-50 flex flex-col items-center justify-center">
-      <h1 className="text-5xl font-bold mb-8 text-pink-400">📸 Our Memories</h1>
+      <h1 className="text-5xl font-bold mb-8 text-pink-400">
+        📸 Our Memories
+      </h1>
 
       <Image
         src={memories[index].image}
-        alt=""
+        alt="Memory"
         width={400}
         height={500}
         className="w-[350px] h-[450px] object-cover rounded-3xl shadow-xl"
@@ -55,21 +65,14 @@ export default function Gallery() {
         {memories[index].caption}
       </p>
 
-      <div className="flex gap-4 mt-6">
-        <button
-          onClick={() => setIndex((index + 1) % memories.length)}
-          className="bg-pink-500 text-white px-5 py-3 rounded-full"
-        >
-          Next ❤️
-        </button>
-      </div>
-
-      <button
-        onClick={() => router.push("/letter")}
-        className="mt-10 bg-purple-600 text-white px-8 py-4 rounded-full"
+      <buttonrun
+        onClick={handleNext}
+        className="mt-6 bg-pink-500 text-white px-6 py-3 rounded-full"
       >
-        Read My Letter 💌
-      </button>
+        {index === memories.length - 1
+          ? "Read My Letter 💌"
+          : "Next ❤️"}
+      </buttonrun>
     </main>
   );
 }

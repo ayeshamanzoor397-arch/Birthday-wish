@@ -7,22 +7,31 @@ export default function LetterPage() {
 
   const router = useRouter()
 
-  const message = `
-💖 Happy Birthday Sidra...
+ const message = `
+💌 Dear Mukarram Ali,
 
-✨ Thank you for being my best friend...
+Happy Birthday, My Love. ❤️🎂
 
-🌸 You know tm sb sy khoobsurat ho...
+Today is all about celebrating the most amazing person in my life—you.
 
-🦋 Mn chahti hn hm hmesha achy dost rhn...
+I may not always find the perfect words to express how much you mean to me, but I hope you always know that you are incredibly special to my heart.
 
-🎂 Hmara har khawaab such ho...
+Thank you for every smile you've given me, every moment we've shared, and every memory we've created together. You make my world brighter just by being in it.
 
-❤️ Thank you har cheez k liay...
+On your birthday, I pray that Allah fills your life with endless happiness, good health, success, and countless blessings. May every dream you have come true, and may your heart always stay at peace.
 
-🌷 Tmhary any sy meri life change ho gai...
+No matter what happens, I promise to always stand beside you, support you, and love you with all my heart.
 
-🎉 Happy Birthday once again...
+You are not just my favourite person...
+You are my home, my comfort, my happiness, and my forever.
+
+Happy Birthday once again, Mukarram Ali. ❤️
+
+I Love You Today,
+Tomorrow,
+And Every Day After That...
+
+Forever Yours ❤️
 `
 
   return (
